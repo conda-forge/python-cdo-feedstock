@@ -7,16 +7,15 @@ Package license: GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Use CDO in the context of Python as if it would be a native library.
+Summary: Use CDO in the context of Python as if it would be a native library
 
 
 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/python-cdo-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/python-cdo-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/python-cdo-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/python-cdo-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/python-cdo-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/python-cdo-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/python-cdo-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/python-cdo-feedstock)
 
 Current release info
 ====================
