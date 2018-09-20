@@ -9,11 +9,12 @@ source:
   sha256: dae7cdba3c52d36a4cdcd9e91183416f05f1478a02960048777b1860c2601d27
 
 build:
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -30,7 +31,8 @@ test:
 about:
   home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
   license: GPL-2.0
-  summary: 'Use CDO in the context of Python as if it would be a native library.'
+  license_file: '{{ environ["RECIPE_DIR"] }}/COPYING'
+  summary: 'Use CDO in the context of Python as if it would be a native library'
 
 extra:
   recipe-maintainers:
