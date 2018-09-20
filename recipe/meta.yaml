@@ -20,7 +20,7 @@ requirements:
   run:
     - python
     - setuptools
-    - cdo  # [not win]
+    - cdo
     - six
 
 test:
