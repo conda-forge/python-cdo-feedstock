@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.5.1" %}
 
 package:
   name: python-cdo
@@ -6,19 +6,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cdo/cdo-{{ version }}.tar.gz
-  sha256: dae7cdba3c52d36a4cdcd9e91183416f05f1478a02960048777b1860c2601d27
+  sha256: cf1feacf21cafa7af3373e40c75a83c412cc3c8d57b67a138484bcbbb0d98f6c
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - setuptools
     - cdo
     - six
@@ -26,12 +26,11 @@ requirements:
 test:
   imports:
     - cdo
-    - six
 
 about:
   home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
   license: GPL-2.0
-  license_file: '{{ environ["RECIPE_DIR"] }}/COPYING'
+  license_file: COPYING
   summary: 'Use CDO in the context of Python as if it would be a native library'
 
 extra:
