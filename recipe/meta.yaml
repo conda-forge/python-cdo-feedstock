@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -31,7 +31,7 @@ test:
 about:
   home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
   license: GPL-2.0
-  license_file: '{{ environ["RECIPE_DIR"] }}/COPYING'
+  license_file: COPYING
   summary: 'Use CDO in the context of Python as if it would be a native library'
 
 extra:
