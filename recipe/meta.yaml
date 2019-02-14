@@ -26,7 +26,6 @@ requirements:
 test:
   imports:
     - cdo
-    - six
 
 about:
   home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
