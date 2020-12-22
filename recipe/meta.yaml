@@ -1,4 +1,4 @@
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 package:
   name: python-cdo
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cdo/cdo-{{ version }}.tar.gz
-  sha256: b35b872046c3bd98e9d325882197df6f4c4b92c0602bb2ce4bb3af645b0cdb4f
+  sha256: 997c5d31c964edbae4835eed7055734e8ec67533a5aaa2a9f69f86a0c23173ac
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -31,7 +31,7 @@ about:
   home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
   license: GPL-2.0
   license_file: COPYING
-  summary: 'Use CDO in the context of Python as if it would be a native library'
+  summary: Use CDO in the context of Python as if it would be a native library
 
 extra:
   recipe-maintainers:
