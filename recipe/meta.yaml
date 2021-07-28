@@ -1,4 +1,4 @@
-{% set version = "1.5.4" %}
+{% set version = "1.5.5" %}
 
 package:
   name: python-cdo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cdo/cdo-{{ version }}.tar.gz
-  sha256: 997c5d31c964edbae4835eed7055734e8ec67533a5aaa2a9f69f86a0c23173ac
+  sha256: 88685e26552ea2abe71c42fbe506973b24b50eb2f32661092f1041d465ff89cc
 
 build:
   number: 0
@@ -36,3 +36,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - Try2Code 
