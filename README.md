@@ -3,7 +3,7 @@ About python-cdo
 
 Home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
 
-Package license: GPL-2.0
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-cdo-feedstock/blob/master/LICENSE.txt)
 
