@@ -1,24 +1,26 @@
-{% set version = "1.5.5" %}
+{% set name = "python-cdo" %}
+{% set version = "1.5.6" %}
+
 
 package:
-  name: python-cdo
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/c/cdo/cdo-{{ version }}.tar.gz
-  sha256: 88685e26552ea2abe71c42fbe506973b24b50eb2f32661092f1041d465ff89cc
+  sha256: fec1a75382f01b3c9c368e8f143d98b12323e06975663f87d9b60c739ae1d335
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python >=3.6
     - pip
   run:
-    - python >=3
+    - python >=3.6
     - setuptools
     - cdo
     - six
@@ -26,14 +28,18 @@ requirements:
 test:
   imports:
     - cdo
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://code.zmaw.de/projects/cdo/wiki/Cdo%7Brbpy%7D
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_file: COPYING
   summary: Use CDO in the context of Python as if it would be a native library
 
 extra:
   recipe-maintainers:
     - ocefpaf
-    - Try2Code 
+    - Try2Code
