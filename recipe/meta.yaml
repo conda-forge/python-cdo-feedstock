@@ -1,5 +1,5 @@
 {% set name = "python-cdo" %}
-{% set version = "1.5.7" %}
+{% set version = "1.6.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cdo/cdo-{{ version }}.tar.gz
-  sha256: 898c2b0ff97ec494569e5d94302350538efa898d42998bfed76b4f52c6c16f3c
+  sha256: 6bdfc38b3ba00c5375aa97e2fd0431a4186953cba5156e60247a8ab6a0dd7f7e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
