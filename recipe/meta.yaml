@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - setuptools
+    - packaging
     - cdo
     - six
 
