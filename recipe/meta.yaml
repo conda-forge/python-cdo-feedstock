@@ -1,5 +1,5 @@
 {% set name = "python-cdo" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 
 package:
@@ -7,13 +7,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/cdo/cdo-{{ version }}.tar.gz
-  sha256: 6bdfc38b3ba00c5375aa97e2fd0431a4186953cba5156e60247a8ab6a0dd7f7e
+  url: https://github.com/Try2Code/cdo-bindings/archive/refs/tags/{{ version }}.tar.gz
+  sha256: bd36f7ca326f92b14f9629b0fc0dc2ca1b7f6e7deee41857c935603dcadbc2d2
 
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - cd python/
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -22,7 +24,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - setuptools
+    - packaging
     - cdo
     - six
 
